@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: high-prio-pod
+spec:
+  containers:
+  - name: high-prio-pod
+    image: nginx
+  priorityClassName: high-priority
+
