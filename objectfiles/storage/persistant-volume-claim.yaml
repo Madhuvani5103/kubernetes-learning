@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: claim-log-1
+  name: local-pvc
 # every persistant volume is bound to a single persistent volume (PVC -> PV)
 spec:
   accessModes:
   - ReadWriteOnce
+  storageClassName: local-path
   resources:
     requests:
-      storage: 50Mi
+      storage: 500Mi
